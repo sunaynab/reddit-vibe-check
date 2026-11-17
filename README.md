@@ -20,6 +20,19 @@ Today's onboarding asks new users to pick interests from a list of topics. That'
 - **It ignores intent.** Many people arrive from a search with a specific job to do, like researching a purchase or getting advice.
 - **There's no payoff.** Picking topics feels like a form, so people skip it or pick at random.
 
+## How Vibe Check tackles cold start
+ 
+Reddit's [Ecosystem Relevance](https://job-boards.greenhouse.io/reddit/jobs/8148055) team asks how to serve new users when Reddit knows little about them. Vibe Check's answer: collect stronger signals in 60 seconds, each tied to a real community.
+ 
+| Challenge | Vibe Check's approach |
+| --- | --- |
+| **Cold start** | Every pick is a community signal; search arrivals are seeded from their landing thread |
+| **Exploration** | Pairs span interest areas, and the feed keeps an exploration slot |
+| **Early personalization** | Starter pack and tuned feed before onboarding ends |
+| **Niche discovery** | Features focused communities, not just popular ones |
+| **Community coherence** | Humor round matches users to a community's tone |
+| **Durable gains** | Day-7 retention leads; day-30 retention guards against novelty bumps |
+
 ## The solution
 
 Vibe Check replaces the topic picker with a short game. Every answer teaches the recommender something, and every screen shows the user real Reddit-style content.
@@ -108,6 +121,6 @@ open index.html   # or double-click the file
 
 ## About
 
-Built by **Sunayna Bhikha**, an ML engineer and technical product lead with 8 years in engineering, 5 of them in AI/ML. This project shows how I approach a product problem: understand the user, design for the data the system needs, and measure what actually matters.
+Built by **Sunayna Bhikha**, an ML engineer and technical product lead with 8 years in engineering, 5 years focused in AI/ML. This project shows how I approach a product problem: understand the user, design for the data the system needs, and measure what actually matters. 
 
 Feedback is welcome. Open an issue or reach out on [LinkedIn](https://www.linkedin.com/in/sunaynabhikha).
