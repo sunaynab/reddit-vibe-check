@@ -389,13 +389,18 @@
       m.classList.add("show");
       document.getElementById("shareClose").onclick = function () { m.classList.remove("show"); };
       document.getElementById("shareCopy").onclick = function () {
-        var text = "My Reddit personality is “" + personaTitle + "” (" + tier + "). What's yours?";
+        var appUrl = "https://sunaynab.github.io/reddit-vibe-check/";
+        var text = "My Reddit personality is “" + personaTitle + "” (" + tier + "). What's yours? Find out: " + appUrl;
         if (navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText(text).then(function () { showToast("Copied! Paste it anywhere."); }).catch(function () { showToast("Couldn't copy — select the text instead."); });
-        } else { showToast("Copied! Paste it anywhere."); }
-      };
+          navigator.clipboard.writeText(text)
+            .then(function () { showToast("Copied! Paste it anywhere."); })
+            .catch(function () { showToast("Couldn't copy. Select the text instead."); });
+        } else {
+          showToast("Couldn't copy on this browser. Select the text instead.");
+        }
+      }
     }
-  };
+  }
 
   function progressBar(label) {
     var pct = Math.round((stepIndex() / totalSteps()) * 100);
